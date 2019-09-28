@@ -38,7 +38,7 @@ render(){
                   <h5>INFORMATION</h5>
                   <ul className="list-unstyled">
                     <li>
-                      <a className="text-white" href="#">Wholesale</a>
+                      <a className="text-white" href="#">Terms & Conditions</a>
                     </li>
                     <li>
                       <a className="text-white" href="#">Policies</a>
