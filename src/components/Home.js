@@ -11,7 +11,7 @@ const Home = () => {
       </div>
 
       <div className="offset-1" style={{float:"left"}}>
-      <h2 className="mt-5 ml-5">2 days Free Trail</h2>
+      <h2 className="mt-5 ml-5">1 days Free Trail</h2>
       <img className="offset-1" src="https://www.drivedrivecar.com/assets/img/list-car.png" style={{width:"400px",height:"400px"}}></img>
       </div>
       

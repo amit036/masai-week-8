@@ -4,7 +4,7 @@ import Signup from './Signup'
 const Trail2day=()=>{
     return(
         <div style={{marginTop:"100px"}}>
-        <h1 style={{textAlign:"center"}}>First Register & Get 2 day Free Trail</h1>
+        <h1 style={{textAlign:"center"}}>First Register & Get 1 day Free Trail</h1>
          <Signup />
         </div>
     )

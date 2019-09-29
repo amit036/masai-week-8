@@ -13,7 +13,7 @@ const Home_carousel=()=>{
       <img style={{height: "800px"}} class="d-block w-100" src="https://d36g7qg6pk2cm7.cloudfront.net/assets/og_city_home-49f86ab1b6f03e6ac461849bf5e5aabf9d1a28660ae121e99bde93444e38b973.jpg" alt="First slide" />
       <div class="carousel-caption d-none d-md-block">
       <button className="btn btn-primary ">BOOK </button>
-      <button className="btn btn-primary ml-4">FREE 2 DAYS TRAIL</button>
+      <button className="btn btn-primary ml-4">FREE 1 DAY TRAIL</button>
      </div>
    </div>
     <div class="carousel-item">
