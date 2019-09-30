@@ -1,5 +1,5 @@
 import React from 'react'
-import Card from './Card'
+import {Link} from 'react-router-dom'
 import VehicleTitle from './VehicleTitle'
 class RentScooty extends React.Component{
     constructor(){
@@ -9,51 +9,61 @@ class RentScooty extends React.Component{
             {
                 name:"TVS Jupiter",
                 imgUrl:"https://bd.gaadicdn.com/processedimages/tvs/tvs-scooty/640X309/v_scooty-pep-plus_gd.png",
-                rent:"₹500/day"
+                rent:"₹10/Km",
+                scootyNo:"KA01A0098"
             },
             {
                 name:"TVS Zest",
                 imgUrl:"https://auto.ndtvimg.com/bike-images/big/tvs/scooty-zest-110/tvs-scooty-zest-110.jpg?v=24",
-                rent:"₹500/day"
+                rent:"₹10/Km",
+                scootyNo:"KA01A0098"
             },
             {
                 name:"TVS Jupiter",
                 imgUrl:"https://bd.gaadicdn.com/processedimages/tvs/tvs-scooty/640X309/v_scooty-pep-plus_gd.png",
-                rent:"₹500/day"
+                rent:"₹10/Km",
+                scootyNo:"KA01A0098"
             },
             {
                 name:"TVS Zest",
                 imgUrl:"https://auto.ndtvimg.com/bike-images/big/tvs/scooty-zest-110/tvs-scooty-zest-110.jpg?v=24",
-                rent:"₹500/day"
+                rent:"₹10/Km",
+                scootyNo:"KA01A0098"
             },  {
                 name:"TVS Jupiter",
                 imgUrl:"https://bd.gaadicdn.com/processedimages/tvs/tvs-scooty/640X309/v_scooty-pep-plus_gd.png",
-                rent:"₹500/day"
+                rent:"₹10/Km",
+                scootyNo:"KA01A0098"
             },
             {
                 name:"TVS Zest",
                 imgUrl:"https://auto.ndtvimg.com/bike-images/big/tvs/scooty-zest-110/tvs-scooty-zest-110.jpg?v=24",
-                rent:"₹500/day"
+                rent:"₹10/Km",
+                scootyNo:"KA01A0098"
             },  {
                 name:"TVS Jupiter",
                 imgUrl:"https://bd.gaadicdn.com/processedimages/tvs/tvs-scooty/640X309/v_scooty-pep-plus_gd.png",
-                rent:"₹500/day"
+                rent:"₹10/Km",
+                scootyNo:"KA01A0098"
             },
             {
                 name:"TVS Zest",
                 imgUrl:"https://auto.ndtvimg.com/bike-images/big/tvs/scooty-zest-110/tvs-scooty-zest-110.jpg?v=24",
-                rent:"₹500/day"
+                rent:"₹10/Km",
+                scootyNo:"KA01A0098"
             },  {
                 name:"TVS Jupiter",
                 imgUrl:"https://bd.gaadicdn.com/processedimages/tvs/tvs-scooty/640X309/v_scooty-pep-plus_gd.png",
-                rent:"₹500/day"
+                rent:"₹10/Km",
+                scootyNo:"KA01A0098"
             },
             {
                 name:"TVS Zest",
                 imgUrl:"https://auto.ndtvimg.com/bike-images/big/tvs/scooty-zest-110/tvs-scooty-zest-110.jpg?v=24",
-                rent:"₹500/day"
+                rent:"₹10/Km",
+                scootyNo:"KA01A0098"
             }
-
+    
         ]
     }
     }
@@ -64,11 +74,17 @@ class RentScooty extends React.Component{
                     <VehicleTitle bg="#DD136F" vname="Scooty"/>
                 </div>
             {
-              this.state.Scooty.map(items => {
+              this.state.Scooty.map((items,index) => {
                 return (
-                <div style={{float:"left"}}>
-                  <Card name={items.name} rent={items.rent} imgUrl={items.imgUrl}/>
-                </div>
+                    <div style={{float:"left"}}>
+                    <div className="card" style={{ width: "300px", marginLeft: "60px",marginBottom:"20px"}}>
+                     <img src={items.imgUrl} style={{ width: "280px", height: "200px" }}></img>
+                     <hr></hr>
+                     <p style={{ textAlign: "center" }}>{items.name}</p>
+                     <p style={{ textAlign: "center", fontWeight: "bold" }}>{items.rent}</p>
+                     <Link to={`/bookScooty/${index + 1}`}><button className="btn btn-primary" style={{width:"100%"}} >BOOK</button></Link>       
+                 </div>      
+                 </div>
                 )
               })
             }

@@ -1,24 +1,76 @@
 import React from 'react'
-const BookScooty=()=>{
-    return(
-       <div style={{marginLeft:"600px",marginTop:"200px"}}>
-       <img src="https://bd.gaadicdn.com/processedimages/tvs/tvs-scooty/640X309/v_scooty-pep-plus_gd.png" style={{width:"400px",height:"300px",marginLeft:"-50px"}}></img>
-       <p style={{marginLeft:"100px"}}>TVS Jupiter</p>
-       <p style={{marginLeft:"100px"}}>₹800/day</p>
-       <select className="form-control" style={{width:"250px"}}>
-           <option value="1">1 Day</option>
-           <option value="2">2 Day</option>
-           <option value="3">3 Day</option>
-           <option value="4">4 Day</option>
-           <option value="5">5 Day</option>
-           <option value="6">6 Day</option>
-           <option value="7">7 Day</option>
-           <option value="8">8 Day</option>
-           <option value="9">9 Day</option>
-           <option value="10">10 Day</option>
-       </select>
-       <button className="btn btn-success" style={{marginTop:"20px",width:"250px"}}>Book</button>
-        </div>
+import SelectLocationScooty from './SelectLocationScooty';
+const BookScooty = ({ match, location }) => {
+    const { params: { itemId } } = match;
+    var Scooty=[
+        {
+            name:"TVS Jupiter",
+            imgUrl:"https://bd.gaadicdn.com/processedimages/tvs/tvs-scooty/640X309/v_scooty-pep-plus_gd.png",
+            rent:"₹10/Km",
+            scootyNo:"KA01A0098"
+        },
+        {
+            name:"TVS Zest",
+            imgUrl:"https://auto.ndtvimg.com/bike-images/big/tvs/scooty-zest-110/tvs-scooty-zest-110.jpg?v=24",
+            rent:"₹10/Km",
+            scootyNo:"KA01A0098"
+        },
+        {
+            name:"TVS Jupiter",
+            imgUrl:"https://bd.gaadicdn.com/processedimages/tvs/tvs-scooty/640X309/v_scooty-pep-plus_gd.png",
+            rent:"₹10/Km",
+            scootyNo:"KA01A0098"
+        },
+        {
+            name:"TVS Zest",
+            imgUrl:"https://auto.ndtvimg.com/bike-images/big/tvs/scooty-zest-110/tvs-scooty-zest-110.jpg?v=24",
+            rent:"₹10/Km",
+            scootyNo:"KA01A0098"
+        },  {
+            name:"TVS Jupiter",
+            imgUrl:"https://bd.gaadicdn.com/processedimages/tvs/tvs-scooty/640X309/v_scooty-pep-plus_gd.png",
+            rent:"₹10/Km",
+            scootyNo:"KA01A0098"
+        },
+        {
+            name:"TVS Zest",
+            imgUrl:"https://auto.ndtvimg.com/bike-images/big/tvs/scooty-zest-110/tvs-scooty-zest-110.jpg?v=24",
+            rent:"₹10/Km",
+            scootyNo:"KA01A0098"
+        },  {
+            name:"TVS Jupiter",
+            imgUrl:"https://bd.gaadicdn.com/processedimages/tvs/tvs-scooty/640X309/v_scooty-pep-plus_gd.png",
+            rent:"₹10/Km",
+            scootyNo:"KA01A0098"
+        },
+        {
+            name:"TVS Zest",
+            imgUrl:"https://auto.ndtvimg.com/bike-images/big/tvs/scooty-zest-110/tvs-scooty-zest-110.jpg?v=24",
+            rent:"₹10/Km",
+            scootyNo:"KA01A0098"
+        },  {
+            name:"TVS Jupiter",
+            imgUrl:"https://bd.gaadicdn.com/processedimages/tvs/tvs-scooty/640X309/v_scooty-pep-plus_gd.png",
+            rent:"₹10/Km",
+            scootyNo:"KA01A0098"
+        },
+        {
+            name:"TVS Zest",
+            imgUrl:"https://auto.ndtvimg.com/bike-images/big/tvs/scooty-zest-110/tvs-scooty-zest-110.jpg?v=24",
+            rent:"₹10/Km"
+        }
+
+    ]
+  
+    return (
+      <>
+     <div style={{marginLeft:"750px",marginTop:"150px"}}>
+     <img src={Scooty[itemId-1].imgUrl} style={{width:"400px",height:"300px",marginLeft:"-50px"}}></img>
+     <p style={{marginLeft:"130px",fontWeight:"bold"}}> {Scooty[itemId - 1].name}</p>
+     <p style={{marginLeft:"140px",fontWeight:"bold"}}> {Scooty[itemId - 1].rent}</p>
+    </div>
+     <SelectLocationScooty />
+      </>
     );
-}
+  };
 export default BookScooty;

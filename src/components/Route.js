@@ -11,6 +11,7 @@ import BookCar from "./BookCar.js";
 import BookBike from "./BookBike.js";
 import BookScooty from "./BookScooty.js";
 import Contact from "./Contact.js";
+import BookCarConfirmation from "./BookCarConfirmation.js";
 const Routes = () => {
   return (
     <div>
@@ -23,10 +24,11 @@ const Routes = () => {
         <Route path="/pricing" component={Pricing}/>
         <Route path="/trail" component={Trail2day}/>
         <Route path="/rent" component={Rent}/>
-        <Route path="/bookCar" component={BookCar}/>
-        <Route path="/bookBike" component={BookBike}/>
-        <Route path="/bookScooty" component={BookScooty}/>
+        <Route path="/bookCar/:itemId" component={BookCar}/>
+        <Route path="/bookBike/:itemId" component={BookBike}/>
+        <Route path="/bookScooty/:itemId" component={BookScooty}/>
         <Route path="/contact" component={Contact}/>
+        <Route path="/bookCarConfirmation" component={BookCarConfirmation}/>
       </React.Fragment>
     </div>
   )

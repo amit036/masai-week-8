@@ -1,5 +1,5 @@
 import React from 'react'
-import Card from './Card';
+import {Link} from 'react-router-dom'
 import VehicleTitle from './VehicleTitle';
 class Rentcar extends React.Component{
     constructor(props){
@@ -9,64 +9,59 @@ class Rentcar extends React.Component{
             {
                 name:"Maruti Suzuki",
                 imgUrl:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRHfGg935oEr6Jg61BlITRwwomM3NfenU016R4CpYn9soWYew5T7A",
-                rent:"₹1500/day",
-                id:0
+                rent:"₹60/Km",
             },
             {
                 name:"Maruti Dzire",
                 imgUrl:"https://media.zigcdn.com/media/model/2017/May/dire_320x160.jpg",
-                rent:"₹1500/day",
-                id:1
+                rent:"₹60/Km",
             },
             {
                 name:"Maruti Ertiga",
                 imgUrl:"http://im.rediff.com/money/2019/aug/08ertiga.jpg",
-                rent:"₹1500/day",
-                id:2
+                rent:"₹60/Km",
             },
             {
                 name:"Maruti Suzuki",
                 imgUrl:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRHfGg935oEr6Jg61BlITRwwomM3NfenU016R4CpYn9soWYew5T7A",
-                rent:"₹1500/day",
-                id:3
-            },
-            {
-                name:"Maruti Dzire",
-                imgUrl:"https://media.zigcdn.com/media/model/2017/May/dire_320x160.jpg",
-                rent:"₹1500/day",
-                id:4
-            },
-            {
-                name:"Maruti Ertiga",
-                imgUrl:"http://im.rediff.com/money/2019/aug/08ertiga.jpg",
-                rent:"₹1500/day",
-                id:5
-            },
-            {
-                name:"Maruti Suzuki",
-                imgUrl:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRHfGg935oEr6Jg61BlITRwwomM3NfenU016R4CpYn9soWYew5T7A",
-                rent:"₹1500/day",
-                id:6
-            },
-            {
-                name:"Maruti Dzire",
-                imgUrl:"https://media.zigcdn.com/media/model/2017/May/dire_320x160.jpg",
-                rent:"₹1500/day",
-                id:7
-            },
-            {
-                name:"Maruti Ertiga",
-                imgUrl:"http://im.rediff.com/money/2019/aug/08ertiga.jpg",
-                rent:"₹1500/day",
-                id:8
-            },
-            {
-                name:"Maruti Ertiga",
-                imgUrl:"http://im.rediff.com/money/2019/aug/08ertiga.jpg",
-                rent:"₹1500/day",
-                id:9
-            }
+                rent:"₹60/Km"
 
+            },
+            {
+                name:"Maruti Dzire",
+                imgUrl:"https://media.zigcdn.com/media/model/2017/May/dire_320x160.jpg",
+                rent:"₹60/Km"
+                
+            },
+            {
+                name:"Maruti Ertiga",
+                imgUrl:"http://im.rediff.com/money/2019/aug/08ertiga.jpg",
+                rent:"₹60/Km"
+                
+            },
+            {
+                name:"Maruti Suzuki",
+                imgUrl:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRHfGg935oEr6Jg61BlITRwwomM3NfenU016R4CpYn9soWYew5T7A",
+                rent:"₹60/Km"
+                
+            },
+            {
+                name:"Maruti Dzire",
+                imgUrl:"https://media.zigcdn.com/media/model/2017/May/dire_320x160.jpg",
+                rent:"₹60/Km"
+                
+            },
+            {
+                name:"Maruti Ertiga",
+                imgUrl:"http://im.rediff.com/money/2019/aug/08ertiga.jpg",
+                rent:"₹60/Km"
+                
+            },
+            {
+                name:"Maruti Ertiga",
+                imgUrl:"http://im.rediff.com/money/2019/aug/08ertiga.jpg",
+                rent:"₹60/Km"
+            }
         ]
     }
     }
@@ -77,11 +72,17 @@ class Rentcar extends React.Component{
                 <VehicleTitle bg="red" vname="Car"/>
             </div>
         {
-          this.state.Car.map(items => {
+          this.state.Car.map((items,index) => {
             return (
-            <div style={{float:"left"}}>
-              <Card name={items.name} rent={items.rent} imgUrl={items.imgUrl}/>
-            </div>
+                <div style={{float:"left"}}>
+                <div className="card" style={{ width: "300px", marginLeft: "60px",marginBottom:"20px"}}>
+                 <img src={items.imgUrl} style={{ width: "280px", height: "200px" }}></img>
+                 <hr></hr>
+                 <p style={{ textAlign: "center" }}>{items.name}</p>
+                 <p style={{ textAlign: "center", fontWeight: "bold" }}>{items.rent}</p>
+                 <Link to={`/bookCar/${index + 1}`}><button className="btn btn-primary" style={{width:"100%"}} >BOOK</button></Link>       
+             </div>      
+             </div>
             )
           })
         }
