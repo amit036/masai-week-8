@@ -1,5 +1,6 @@
 import React from 'react'
 import './Login.css';
+import { Link } from "react-router-dom";
 const AdminLog = () => {
     return (
         <div>
@@ -14,7 +15,7 @@ const AdminLog = () => {
                         <input type="password" className="form-control" placeholder="Password" required="required" />
                     </div>
                     <div className="form-group">
-                        <button type="submit" className="btn btn-primary btn-block">Log in</button>
+                       <Link to="/AddVehicle"><button type="submit" className="btn btn-primary btn-block">Log in</button></Link> 
                     </div>
                     <div className="clearfix">
                         <a href="#" className="offset-3">Forgot Password?</a>
